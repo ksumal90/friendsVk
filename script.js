@@ -55,7 +55,7 @@ function refreshArrays(pushArray, deleteArray, selectElement) {
          }
     };
 }
-  
+ 
 function find(array, valueInput, container) {//передаем массив, по которому осуществляется поиск, значение для поиска, и контейнер, куда вставляем полученный массив
     var findArray = [];
     array.forEach(function(friend) {
@@ -78,7 +78,6 @@ function moveOneElement(selectElement,arrayDelete,arrayPush,selectUl) {//пер�
         }
     }
 }
-
 new Promise(function(resolve,reject){
     window.addEventListener('load', function(){
         resolve();
@@ -144,21 +143,9 @@ new Promise(function(resolve,reject){
     divFind.addEventListener('input', function(e) {
         if (e.target.id == 'inputLeft'){
             find(friendsArray, e.target.value, allFriends);
-              console.log('findArray');
-    console.log(findArray);
-    console.log('selectArray');
-    console.log(selectArray);
-    console.log('friendsArray');
-    console.log(friendsArray);
         }
         if (e.target.id == 'inputRight'){
             find(selectArray, e.target.value, selectFriends);
-              console.log('findArray');
-    console.log(findArray);
-    console.log('selectArray');
-    console.log(selectArray);
-    console.log('friendsArray');
-    console.log(friendsArray);
         }  
     });
     var buttonSave = document.querySelector('.save');
